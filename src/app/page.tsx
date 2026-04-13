@@ -4,7 +4,7 @@ import InfoSection from "@/components/sections/InfoSection";
 import TeamSection from "@/components/sections/TeamSection";
 import Testimonial from "@/components/sections/Testimonial";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
-
+import PlacedStudents from "@/components/sections/PlacedStudents";
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
     <Hero />
     <InfoSection />
     <AboutSection />
+    <PlacedStudents />
     <WhyChooseSection />
     <Testimonial />
     <TeamSection />

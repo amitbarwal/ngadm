@@ -1,44 +1,92 @@
 'use client'
 import Image from "next/image";
+import { ArrowRight, CheckCircle2, Target, TrendingUp } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section className="flex justify-center py-24 px-6 md:px-20 relative overflow-hidden bg-white">
+    <section className="py-24 px-6 md:px-20 relative overflow-hidden bg-white">
        {/* Background accent */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-gradient-to-tr from-orange-100 to-white rounded-full blur-3xl opacity-60 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-orange-50 to-white rounded-full blur-[100px] opacity-70 pointer-events-none" />
 
-      <div className="flex flex-col md:flex-row bg-white rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] w-full max-w-[1155px] overflow-hidden relative z-10 animate-fade-in-up transition-all hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] duration-500">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center relative z-10">
         
-        {/* Image Section */}
-        <div className="relative w-full md:w-[50%] h-[300px] md:h-auto flex-shrink-0 group overflow-hidden">
-          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-500 z-10"></div>
-          <Image
-            src="/aboutus.jpg"
-            alt="About NGA"
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-          />
+        {/* Left Side: Image Cluster */}
+        <div className="w-full lg:w-1/2 relative">
+          <div className="relative w-full aspect-square max-w-[500px] mx-auto z-10 rounded-3xl overflow-hidden shadow-2xl animate-fade-in-up">
+            <Image
+              src="/aboutus.jpg"
+              alt="About NGA"
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-105"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+          </div>
+
+          {/* Floating Experience Card */}
+          <div className="absolute -bottom-8 -right-4 md:right-8 z-20 bg-white p-6 rounded-2xl shadow-[0_10px_40px_rgba(255,115,0,0.15)] animate-float glass-card" style={{ animationDelay: '0.5s' }}>
+            <div className="flex items-center gap-4 border-l-4 border-[#FF7300] pl-4">
+               <div>
+                  <h3 className="text-4xl font-extrabold text-gray-900">7+</h3>
+                  <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mt-1">Years Experience</p>
+               </div>
+            </div>
+          </div>
+          
+          {/* Subtle Background Shape */}
+           <div className="absolute -top-10 -left-10 w-full h-full bg-orange-100/50 rounded-3xl z-0 transform rotate-3 animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        {/* Text Section */}
-        <div className="flex flex-col justify-center px-8 py-10 md:py-16 md:px-14 w-full md:w-[50%]">
+        {/* Right Side: Text Content */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          
+          {/* Section Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 w-fit mb-6">
+            <Target className="w-4 h-4 text-[#FF7300]" />
+            <span className="text-sm font-bold text-orange-600 tracking-wide uppercase">Who We Are</span>
+          </div>
+
           {/* Title */}
-          <h2 className="text-3xl md:text-[40px] font-extrabold mb-6 leading-snug text-gray-900 tracking-tight">
-            About <span className="text-[#FF7300]">NGA</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-[1.2] text-gray-900 tracking-tight">
+            Shaping Futures at <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7300] to-orange-400">Next Gen Academy</span>
           </h2>
 
-          {/* Paragraph */}
-          <p className="text-gray-600 mb-8 text-base md:text-lg leading-relaxed">
-            Next Gen Academy (NGA) is a leading skill-development institute in Hisar, Haryana, committed to shaping careers in 
-            <span className="font-semibold text-gray-800"> Digital Marketing and Web Development</span>. With a practical and agency-based learning model, we focus on delivering real-time knowledge that prepares students for today’s competitive job market.
-            <br /><br />
-            We don’t just teach—we mentor. Our expert trainers bring 7+ years of industry experience to guide students on the latest trends, tools, and strategies. Every course at NGA is designed to transform beginners into professionals, with a focus on hands-on projects, live campaigns, and performance tracking.
+          {/* Main Description */}
+          <p className="text-gray-600 text-lg leading-relaxed mb-8">
+            Next Gen Academy (NGA) is a leading skill-development institute in Hisar, Haryana. 
+            We bridge the gap between academic learning and industry demands with a practical, agency-based approach. 
           </p>
 
-          {/* Button */}
-          <button className="bg-gradient-to-r from-[#FF7300] to-orange-500 hover:from-orange-600 hover:to-orange-500 text-white font-semibold rounded-full px-8 py-3 w-fit shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-orange-400/50">
-            Learn More
+          {/* List Items */}
+          <div className="space-y-4 mb-10">
+            <div className="flex items-start gap-4 p-4 rounded-2xl hover:bg-orange-50/50 transition-colors border border-transparent hover:border-orange-100">
+              <div className="bg-[#FF7300]/10 p-3 rounded-xl">
+                 <CheckCircle2 className="w-6 h-6 text-[#FF7300]" />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold text-gray-900 mb-1">Industry-Curated Curriculum</h4>
+                <p className="text-gray-600">Real-time knowledge in Digital Marketing and Web Development tailored for today's market.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4 p-4 rounded-2xl hover:bg-orange-50/50 transition-colors border border-transparent hover:border-orange-100">
+              <div className="bg-[#FF7300]/10 p-3 rounded-xl">
+                 <TrendingUp className="w-6 h-6 text-[#FF7300]" />
+              </div>
+              <div>
+                <h4 className="text-xl font-bold text-gray-900 mb-1">Hands-on Agency Projects</h4>
+                <p className="text-gray-600">Work directly on live campaigns, ensuring complete transformation from beginner to professional.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <button className="group relative px-8 py-4 bg-gray-900 text-white font-bold rounded-full overflow-hidden w-fit flex items-center justify-center gap-2 shadow-[0_8px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_30px_rgba(255,115,0,0.3)] transition-all duration-300 transform hover:-translate-y-1">
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#FF7300] to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span className="relative z-10">Discover Our Story</span>
+             <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
           </button>
+
         </div>
       </div>
     </section>

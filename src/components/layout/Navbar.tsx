@@ -36,7 +36,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/">
-                <img src="/nga_logo.png" alt="NGA Logo" className={`w-auto transition-all duration-500 ${scrolled ? 'h-[40px]' : 'h-[50px] drop-shadow-md'} hover:scale-105`} />
+                <img src="/nga_logo.png" alt="NGA Logo" className={`w-auto transition-all duration-500 ${scrolled ? 'h-[60px]' : 'h-[85px] drop-shadow-md'} hover:scale-105`} />
               </Link>
             </div>
 
@@ -93,7 +93,7 @@ const Navbar = () => {
         <div className={`lg:hidden fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-50 transform transition-transform duration-400 ease-in-out flex flex-col ${menuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
           <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-[#FAFAFA]">
-            <img src="/nga_logo.png" alt="NGA Logo" className="h-[40px] w-auto" />
+            <img src="/nga_logo.png" alt="NGA Logo" className="h-[60px] w-auto" />
             <button onClick={() => setMenuOpen(false)} className="p-2 bg-white border border-gray-200 rounded-full text-gray-600 hover:text-orange-500 shadow-sm">
               <X className="w-5 h-5" />
             </button>

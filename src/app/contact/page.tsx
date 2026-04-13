@@ -252,9 +252,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <p className="text-gray-400 font-medium italic mb-10"><span className="text-[#FF7300]">Landmark:</span> Near Town Park / PLA Market</p>
+            <p className="text-gray-400 font-medium italic mb-10"><span className="text-[#FF7300]">Landmark:</span> Near Red Square Market</p>
 
-            <a href="https://maps.google.com/?q=Next+Gen+Academy+Hisar" target="_blank" rel="noreferrer" className="w-full text-center bg-[#FF7300] hover:bg-[#e66a00] text-white py-4 rounded-xl font-bold text-lg shadow-[0_4px_20px_rgba(255,115,0,0.4)] transition-all duration-300">
+            <a href="https://maps.app.goo.gl/7bra3oGKDSAT7Nwi8" target="_blank" rel="noreferrer" className="w-full text-center bg-[#FF7300] hover:bg-[#e66a00] text-white py-4 rounded-xl font-bold text-lg shadow-[0_4px_20px_rgba(255,115,0,0.4)] transition-all duration-300">
               Visit Our Academy Today
             </a>
           </div>

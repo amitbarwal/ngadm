@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <main className="bg-white">
       {/* Page Header */}
-      <section className="relative py-24 bg-gradient-to-b from-orange-50 to-white overflow-hidden">
+      <section className="relative pt-40 pb-24 bg-gradient-to-b from-orange-50 to-white overflow-hidden">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-orange-200 rounded-full blur-3xl opacity-50 mix-blend-multiply animate-float" />
         <div className="max-w-7xl mx-auto px-6 md:px-20 relative z-10 text-center animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
@@ -80,6 +80,74 @@ const AboutPage = () => {
             <p className="text-gray-600 leading-relaxed text-lg">
               To deliver practical, hands-on learning experiences under expert mentorship. We focus entirely on skill development that translates directly into high-paying job opportunities and successful entrepreneurship.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Academy Gallery */}
+      <section className="py-24 px-6 md:px-20 bg-white relative border-t border-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+              Life at <span className="text-[#FF7300]">Next Gen Academy</span>
+            </h2>
+            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+              Take a glimpse into our modern facilities, collaborative environment, and the vibrant culture of excellence.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Gallery Item 1 */}
+            <div className="h-[300px] md:h-[400px] relative rounded-3xl overflow-hidden group shadow-lg">
+              <Image 
+                src="/gallery/academy_classroom.png" 
+                alt="Modern IT Classroom"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <h4 className="text-white text-xl md:text-2xl font-bold">Premium Classrooms</h4>
+              </div>
+            </div>
+            
+            {/* Gallery Item 2 */}
+            <div className="h-[300px] md:h-[400px] relative rounded-3xl overflow-hidden group shadow-lg">
+              <Image 
+                src="/gallery/students_collaborating.png" 
+                alt="Students Collaborating"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <h4 className="text-white text-xl md:text-2xl font-bold">Collaborative Workspace</h4>
+              </div>
+            </div>
+
+            {/* Gallery Item 3 */}
+            <div className="h-[300px] md:h-[400px] relative rounded-3xl overflow-hidden group shadow-lg">
+              <Image 
+                src="/gallery/academy_setup.png" 
+                alt="High-End Workstations"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <h4 className="text-white text-xl md:text-2xl font-bold">Industry Standard Setups</h4>
+              </div>
+            </div>
+
+            {/* Gallery Item 4 */}
+            <div className="h-[300px] md:h-[400px] relative rounded-3xl overflow-hidden group shadow-lg">
+              <Image 
+                src="/gallery/digital_marketing_session.png" 
+                alt="Marketing Session"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <h4 className="text-white text-xl md:text-2xl font-bold">Interactive Coaching</h4>
+              </div>
+            </div>
           </div>
         </div>
       </section>

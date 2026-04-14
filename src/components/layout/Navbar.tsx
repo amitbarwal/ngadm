@@ -115,7 +115,7 @@ const Navbar = () => {
           <div className="p-6 border-t border-gray-100 space-y-4 bg-[#FAFAFA]">
             <div className="flex items-center justify-center gap-2 text-gray-800 font-semibold bg-white px-4 py-3 rounded-xl border border-gray-200 w-full shadow-sm">
               <Phone className="w-5 h-5 text-[#FF7300]" />
-              <span>+91 98765 43210</span>
+              <span>+91 7027500702</span>
             </div>
             <button
               onClick={() => { setOpen(true); setMenuOpen(false); }}
